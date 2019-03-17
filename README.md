@@ -64,8 +64,8 @@ void thread_update_priority (struct thread *t)
 *	Rationale:  
 		Recent_cpu can compute the value of recent_cpu and priority at the end of each slice, so as to determine which thread is running next, recent_cpu can lower the priority of recently run threads, and low-priority threads can be scheduled
 
-ticks|C(A)|C(B)|C(C)|P(A)|P(B)|P(C)|thread to run  
----|:---:|:---:|:---:|:---:|:---:|---|
+|ticks|C(A)|C(B)|C(C)|P(A)|P(B)|P(C)|thread to run|
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 0|0|0|0	63|61|59|A  
 4	4	0	0	62	61	59	A  
 8	8	0	0	61	61	59	B  
