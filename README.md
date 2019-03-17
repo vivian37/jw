@@ -64,17 +64,16 @@ void thread_update_priority (struct thread *t)
 *	Rationale:  
 		Recent_cpu can compute the value of recent_cpu and priority at the end of each slice, so as to determine which thread is running next, recent_cpu can lower the priority of recently run threads, and low-priority threads can be scheduled
 
-ticks	C(A)	C(B)	C(C)	P(A)	P(B)	P(C)	thread to run
-0	0	0	0	63	61	59	A
-4	4	0	0	62	61	59	A
-8	8	0	0	61	61	59	B
-12	8	4	0	61	60	59	A
-16	12	4	0	60	60	59	B
-20	12	8	0	60	59	59	A
-24	16	8	0	59	59	59	C
-28	16	8	4	59	59	58	B
-32	16	12	4	59	58	58	A
-36	20	12	4	58	58	58	C
-
-![Image text](https://github.com/vivian37/jw/blob/master/ans.png)  
+>ticks	C(A)	C(B)	C(C)	P(A)	P(B)	P(C)	thread to run  
+>0	0	0	0	63	61	59	A  
+>4	4	0	0	62	61	59	A  
+>8	8	0	0	61	61	59	B  
+>12	8	4	0	61	60	59	A  
+>16	12	4	0	60	60	59	B  
+>20	12	8	0	60	59	59	A  
+>24	16	8	0	59	59	59	C  
+>28	16	8	4	59	59	58	B  
+>32	16	12	4	59	58	58	A  
+>36	20	12	4	58	58	58	C  
+  
 A: when the priority is same , random chose
